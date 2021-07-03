@@ -1,0 +1,36 @@
+{
+  "name": "RTL Flip Back",
+  "description": "This will flip back flipped rtl text.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons":"rtl logo.png",
+  "permissions": [
+    "clipboardRead","clipboardWrite","scripting","activeTab"
+    
+  ],
+  "host_permissions": [
+    "http://*/",
+    "https://*/"
+],
+  "action": {
+    "default_title": "RTL Flip Back",
+    "default_icon": "rtl logo.png"
+  },
+  "background": { "service_worker": "background.js" },
+  "commands": {
+    "fliprtl": {
+      "suggested_key": {
+        "default": "Alt+V"
+
+      },
+      "description": "paste a fliped text into the clipboard"
+    },
+    "copyfliprtl": {
+      "suggested_key": {
+        "default": "Alt+C"
+
+      },
+      "description": "copy and flip text into the clipboard"
+    }
+  }
+}
